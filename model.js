@@ -43,8 +43,11 @@ function createChocolate(name, yumminess) {
   return chocolate
 }
 
-function updateChocolate() {
-
+function updateChocolate(id, name, yumminess) {
+  const chocolate = getChocolateById(id)
+  chocolate.name = name
+  chocolate.yumminess = yumminess
+  return chocolate
 }
 
 function deleteChocolate() {
