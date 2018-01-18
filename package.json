@@ -20,7 +20,8 @@
   "homepage": "https://github.com/annestarley/chocolate-checkpoint-59#readme",
   "dependencies": {
     "express": "^4.16.2",
-    "morgan": "^1.9.0"
+    "morgan": "^1.9.0",
+    "uuid": "^3.2.1"
   },
   "devDependencies": {
     "nodemon": "^1.14.11"
