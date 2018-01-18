@@ -12,6 +12,9 @@ app.disable('x-powered-by')
 if (process.env.NODE_ENV === 'development') app.use(morgan('dev'))
 app.use(bodyParser.json())
 
+app.get('/', (req, res, next) => {
+  res.send('chocolate page')
+})
 app.get('/chocolates', controller.chocolatesController)
 app.get('/chocolates/:id', controller.chocolateByIdController)
 app.post('/chocolates', controller.chocolateCreaterController)
