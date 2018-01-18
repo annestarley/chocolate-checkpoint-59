@@ -32,7 +32,13 @@ const chocholateUpdaterController = (req, res, next) => {
 }
 
 const chocolateDeleterController = (req, res, next) => {
+  const id = req.params.id
+  console.log('hello');
+  const chocolate = model.getChocolateById(id)
+  if (!chocolate) return next({ status: 404, message: `Could not find chocolate with id of ${id}.` })
 
+  const newChocolatesArray = model.deleteChocolate(id)
+  res.status(204).json()
 }
 
 module.exports = {

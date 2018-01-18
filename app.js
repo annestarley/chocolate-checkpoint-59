@@ -16,7 +16,7 @@ app.get('/chocolates', controller.chocolatesController)
 app.get('/chocolates/:id', controller.chocolateByIdController)
 app.post('/chocolates', controller.chocolateCreaterController)
 app.put('/chocolates/:id', controller.chocholateUpdaterController)
-app.delete('chocolates/:id', controller.chocolateDeleterController)
+app.delete('/chocolates/:id', controller.chocolateDeleterController)
 
 app.use((err, req, res, next) => {
   const status = err.status || 500

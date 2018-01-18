@@ -50,8 +50,11 @@ function updateChocolate(id, name, yumminess) {
   return chocolate
 }
 
-function deleteChocolate() {
-
+function deleteChocolate(id) {
+  const chocolate = getChocolateById(id)
+  const index = chocolates.indexOf(chocolate)
+  chocolates.splice(index, 1)
+  return chocolates
 }
 
 module.exports = {
